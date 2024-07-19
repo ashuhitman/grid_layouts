@@ -1,10 +1,45 @@
 import React from "react";
 import styles from "./flexlayout.module.css";
-import { Box } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import CardItem from "../component/CardItem";
-import { CheckCircle, HourglassBottom } from "@mui/icons-material";
+import {
+  CheckCircle,
+  HourglassBottom,
+  PictureAsPdfRounded,
+} from "@mui/icons-material";
+import ActivityComponent from "../component/ActivityComponent";
 
 function FlexLayout() {
+  const activities = [
+    {
+      title: "Earned 500 points",
+      text: "Earned 500 points",
+      icon: <PictureAsPdfRounded />,
+      color: "orange",
+      iconText: "",
+    },
+    {
+      title: "Joined the program",
+      text: "Earned 500 points",
+      icon: <PictureAsPdfRounded />,
+      color: "red",
+      iconText: "",
+    },
+    {
+      title: "9 invoices has been paid",
+      text: "Earned 500 points",
+      icon: <PictureAsPdfRounded />,
+      color: "green",
+      iconText: "",
+    },
+    {
+      title: "order #423232",
+      text: "Earned 500 points",
+      icon: <PictureAsPdfRounded />,
+      color: "yellow",
+      iconText: "",
+    },
+  ];
   const items = [
     {
       number: 1250,
@@ -48,7 +83,16 @@ function FlexLayout() {
           <Box className={styles.mainRight}>left right</Box>
         </Box>
       </Box>
-      <Box className={styles.right}>right sidebar</Box>
+      <Box className={styles.right}>
+        <Typography variant="h6">User Activity Timeline</Typography>
+        {activities.map((activity, i) => (
+          <ActivityComponent
+            key={activity.title + i}
+            activity={activity}
+            color={activity.color}
+          />
+        ))}
+      </Box>
     </Box>
   );
 }

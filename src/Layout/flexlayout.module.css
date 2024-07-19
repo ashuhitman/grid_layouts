@@ -54,11 +54,14 @@
     display: flex;
     gap: 1rem;
   }
+  .right {
+    padding: 1rem;
+  }
 
   .left,
   .right {
     display: block;
-    width: 180px;
+    width: 240px;
   }
 
   .main {

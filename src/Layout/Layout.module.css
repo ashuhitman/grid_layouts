@@ -46,7 +46,7 @@
   }
   .rightSidebar {
     display: block;
-
+    padding: 1rem;
     grid-column: 11/13;
     grid-row: 1/12;
   }

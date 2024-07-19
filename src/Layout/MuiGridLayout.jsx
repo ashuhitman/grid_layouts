@@ -1,9 +1,44 @@
-import { Box, Grid } from "@mui/material";
+import { Box, Grid, Typography } from "@mui/material";
 import React from "react";
-import { CheckCircle, HourglassBottom } from "@mui/icons-material";
+import {
+  CheckCircle,
+  HourglassBottom,
+  PictureAsPdfRounded,
+} from "@mui/icons-material";
 import CardItem from "../component/CardItem";
+import ActivityComponent from "../component/ActivityComponent";
 
 function MuiGridLayout() {
+  const activities = [
+    {
+      title: "Earned 500 points",
+      text: "Earned 500 points",
+      icon: <PictureAsPdfRounded />,
+      color: "orange",
+      iconText: "",
+    },
+    {
+      title: "Joined the program",
+      text: "Earned 500 points",
+      icon: <PictureAsPdfRounded />,
+      color: "red",
+      iconText: "",
+    },
+    {
+      title: "9 invoices has been paid",
+      text: "Earned 500 points",
+      icon: <PictureAsPdfRounded />,
+      color: "green",
+      iconText: "",
+    },
+    {
+      title: "order #423232",
+      text: "Earned 500 points",
+      icon: <PictureAsPdfRounded />,
+      color: "yellow",
+      iconText: "",
+    },
+  ];
   const items = [
     {
       number: 1250,
@@ -122,12 +157,20 @@ function MuiGridLayout() {
         item
         lg={2}
         sx={{
+          padding: "1rem",
           display: { xs: "none", lg: "block" },
           boxShadow:
             "0px 2px 1px -1px rgba(0, 0, 0, 0.2),0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12)",
         }}
       >
-        right sidebar
+        <Typography variant="h6">User Activity Timeline</Typography>
+        {activities.map((activity, i) => (
+          <ActivityComponent
+            key={activity.title + i}
+            activity={activity}
+            color={activity.color}
+          />
+        ))}
       </Grid>
     </Grid>
   );

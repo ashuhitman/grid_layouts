@@ -1,10 +1,45 @@
 import React from "react";
-import { Box, Card } from "@mui/material";
+import { Box, Card, Typography } from "@mui/material";
 import styles from "./Layout.module.css";
 import CardItem from "../component/CardItem";
-import { CheckCircle, HourglassBottom } from "@mui/icons-material";
+import {
+  CheckCircle,
+  HourglassBottom,
+  PictureAsPdfRounded,
+} from "@mui/icons-material";
+import ActivityComponent from "../component/ActivityComponent";
 
 function Layout() {
+  const activities = [
+    {
+      title: "Earned 500 points",
+      text: "Earned 500 points",
+      icon: <PictureAsPdfRounded />,
+      color: "orange",
+      iconText: "",
+    },
+    {
+      title: "Joined the program",
+      text: "Earned 500 points",
+      icon: <PictureAsPdfRounded />,
+      color: "red",
+      iconText: "",
+    },
+    {
+      title: "9 invoices has been paid",
+      text: "Earned 500 points",
+      icon: <PictureAsPdfRounded />,
+      color: "green",
+      iconText: "",
+    },
+    {
+      title: "order #423232",
+      text: "Earned 500 points",
+      icon: <PictureAsPdfRounded />,
+      color: "yellow",
+      iconText: "",
+    },
+  ];
   const items = [
     {
       number: 1250,
@@ -44,7 +79,17 @@ function Layout() {
       <Box className={styles.mainLeftOne}>main left One</Box>
       <Box className={styles.mainLeftTwo}>main left Two</Box>
       <Box className={styles.mainRight}>main right</Box>
-      <Box className={styles.rightSidebar}>right sidebar</Box>
+      <Box className={styles.rightSidebar}>
+        <Typography variant="h6">User Activity Timeline</Typography>
+
+        {activities.map((activity, i) => (
+          <ActivityComponent
+            key={activity.title + i}
+            activity={activity}
+            color={activity.color}
+          />
+        ))}
+      </Box>
     </Box>
   );
 }
