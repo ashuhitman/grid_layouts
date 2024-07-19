@@ -41,7 +41,10 @@ function FlexLayout() {
           ))}
         </Box>
         <Box className={styles.mainContent}>
-          <Box className={styles.mainLeft}>left main</Box>
+          <Box className={styles.mainLeft}>
+            <Box></Box>
+            <Box></Box>
+          </Box>
           <Box className={styles.mainRight}>left right</Box>
         </Box>
       </Box>

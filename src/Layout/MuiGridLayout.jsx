@@ -31,7 +31,7 @@ function MuiGridLayout() {
     },
   ];
   return (
-    <Grid container sx={{ height: "100vh" }}>
+    <Grid container sx={{ height: "100vh", padding: "1rem" }}>
       <Grid
         item
         sm={12}
@@ -74,13 +74,33 @@ function MuiGridLayout() {
             <Grid item xs={12} lg={4} sx={{ marginTop: "1rem" }}>
               <Box
                 sx={{
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: "1rem",
                   height: "100%",
-                  boxShadow:
-                    "0px 2px 1px -1px rgba(0, 0, 0, 0.2),0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12)",
                   marginRight: { lg: "1rem", xs: "0px" },
                 }}
               >
-                left main
+                <Box
+                  sx={{
+                    boxShadow:
+                      "0px 2px 1px -1px rgba(0, 0, 0, 0.2),0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12)",
+                  }}
+                ></Box>
+                <Box
+                  sx={{
+                    flex: 1,
+                    boxShadow:
+                      "0px 2px 1px -1px rgba(0, 0, 0, 0.2),0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12)",
+                  }}
+                ></Box>
+                <Box
+                  sx={{
+                    flex: 1,
+                    boxShadow:
+                      "0px 2px 1px -1px rgba(0, 0, 0, 0.2),0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12)",
+                  }}
+                ></Box>
               </Box>
             </Grid>
             <Grid item xs={12} lg={8} sx={{ marginTop: "1rem" }}>

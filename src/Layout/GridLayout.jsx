@@ -41,7 +41,8 @@ function Layout() {
           <CardItem key={index + item.number} item={item} />
         ))}
       </Box>
-      <Box className={styles.mainLeft}>main left</Box>
+      <Box className={styles.mainLeftOne}>main left One</Box>
+      <Box className={styles.mainLeftTwo}>main left Two</Box>
       <Box className={styles.mainRight}>main right</Box>
       <Box className={styles.rightSidebar}>right sidebar</Box>
     </Box>
