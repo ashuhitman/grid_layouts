@@ -50,14 +50,16 @@ function App() {
           </Button>
         </ButtonGroup>
       </Box>
-      {/* layput usng display grid property */}
-      {count === 0 && <Layout />}
-      {/* layout using flexbox */}
+      <Box sx={{ padding: { xs: "0.8rem", lg: "1rem" } }}>
+        {/* layput usng display grid property */}
+        {count === 0 && <Layout />}
+        {/* layout using flexbox */}
 
-      {count === 1 && <FlexLayout />}
+        {count === 1 && <FlexLayout />}
 
-      {/* layout using mui grid */}
-      {count === 2 && <MuiGridLayout />}
+        {/* layout using mui grid */}
+        {count === 2 && <MuiGridLayout />}
+      </Box>
     </>
   );
 }

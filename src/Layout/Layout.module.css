@@ -1,9 +1,4 @@
 /* display grid layout css */
-.container {
-  padding: 1rem;
-}
-.contaner > div {
-}
 
 .leftSidebar {
   box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),

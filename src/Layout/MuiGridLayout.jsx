@@ -31,7 +31,7 @@ function MuiGridLayout() {
     },
   ];
   return (
-    <Grid container sx={{ height: "100vh", padding: "1rem" }}>
+    <Grid container sx={{ height: "100vh" }}>
       <Grid
         item
         sm={12}
@@ -52,7 +52,7 @@ function MuiGridLayout() {
         xs={12}
         lg={8}
         sx={{
-          paddingInline: "1rem",
+          paddingInline: { xs: 0, lg: "1rem" },
         }}
       >
         <Box sx={{ display: "flex", flexDirection: "column", height: "100%" }}>
